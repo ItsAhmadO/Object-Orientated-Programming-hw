@@ -1,0 +1,18 @@
+if __name__ == '__main__':
+    class Account:
+        def __init__(self, owner, balance):
+            self.owner = owner
+            self.balance = balance
+            pass
+
+        def __str__(self):
+            return (f"Account owner: {self.owner}\n"
+                    f"Account balance: {self.balance}")
+        def deposit(self, amount):
+            return "Deposit Accepted"
+
+        def withdraw(self, cash):
+            if self.balance >= cash:
+                return "Withdraw Accepted"
+            elif self.balance < cash:
+                return "Funds Unavailable!"
